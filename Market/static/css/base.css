@@ -1,0 +1,13 @@
+body {
+background-color: #FFF0CE;
+}
+ul
+{
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    width: 1200px;
+    left: 50%;
+}
