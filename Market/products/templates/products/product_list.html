@@ -5,45 +5,45 @@
 {%endblock %}
 {% block main %}
 <section class="container">
-    <h1 class="h1_container">МЕБЕЛЬ</h1>
-    <ul class="product_list">
-        {% for p in products %}
+    <div class="catalog-wrapper">
 
-        {% if forloop.counter0|divisibleby:3 %}
-<!--        <div class="product_row">-->
-            {% endif %}
+        <div class="menu">
+            <nav>
+                <ul class="name_menu">
+                    {%for type in product_type %}
+                    <li><a class="link1" href="{%url 'product_filter' type.pk%}">{{type.title}}</a></li>
+                    {%endfor%}
+                </ul>
+            </nav>
+        </div>
 
-            <li class="product_item product_item_normal">
-                <div class="product_img_container">
-                    <img class="product_img" src="{{p.productimg_set.first.image.url}}">
-                </div>
-                <a href="{{p.get_absolute_url}}">
-                    <h2 class="product_title">{{p.title}}</h2>
-                </a>
-                <p class="product_price">{{p.price}}</p>
-                <a href="{%url 'add_to_cart' p.pk%}" class="product_button">В корзину</a>
-            </li>
+        <div class="catalog">
 
-            {% if forloop.counter|divisibleby:3 or forloop.last %}
-<!--        </div>-->
-        {% endif %}
+            <h1 class="h1_container">МЕБЕЛЬ</h1>
+            <ul class="product_list">
+                {% for p in products %}
 
-        {% endfor %}
-    </ul>
-</section>
-<section class="menu">
-    <nav>
-        <h4 class = "menu_katalog">Каталог</h4>
-        <ul class="name_menu">
-            {%for type in product_type%}
-            <li><a class="link1" href="{%url 'product_filter' type.pk%}">{{type.title}}</a></li>
-            {%endfor%}
-<!--            <li><a class="link1" href="#">Шкафы</a></li>-->
-<!--            <li><a class="link2" href="#">Двери</a></li>-->
-<!--            <li><a class="link3" href="#">Столы</a></li>-->
-<!--            <li><a class="link4" href="#">Кровати</a></li>-->
-        </ul>
-    </nav>
+                <li class="product_item ">
+                    <div class="product_img_container">
+                        <img class="product_img" src="{{p.productimg_set.first.image.url}}">
+                    </div>
+                    <div class="product-nav">
+
+                        <a href="{{p.get_absolute_url}}">
+                            <h2 class="product_title">{{p.title}}</h2>
+                        </a>
+                        <p class="product_price">{{p.price}}</p>
+                        <a href="{%url 'add_to_cart' p.pk%}" class="product_button">В корзину</a>
+
+                    </div>
+                </li>
+
+                {% endfor %}
+            </ul>
+
+        </div>
+
+    </div>
 </section>
 
 {% endblock %}

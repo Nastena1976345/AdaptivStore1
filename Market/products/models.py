@@ -16,8 +16,6 @@ class Product(models.Model):
     descriptions = models.TextField()
     product_type = models.ForeignKey(Type, on_delete=models.CASCADE, default=None, null=True)
 
-    # features = models.JSONField()
-
     def __str__(self):
         return f"title: {self.title}, id: {self.pk}"
 

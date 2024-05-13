@@ -2,6 +2,8 @@ ul
 {
     list-style: none;
     margin-top: 100px;
+
+    padding: 0;
 }
 .product_img_wrapper
 {
@@ -23,6 +25,7 @@ ul
 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     position: relative;
     margin-top: 20px;
@@ -30,21 +33,22 @@ ul
 }
 .product_info
 {
-    width: 60%;
-    padding: 20px 0;
+    margin-left: 30px;
     height: 100%;
 }
 .calc_quantity
 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     
 }
-.price_cart
+.price_cart p
 {
-    font-size: 30px;
-    margin-top: 10px;
+    margin: 0;
+    padding: 0;
+    font-size: 33px;
     
 }
 .buy_btn
@@ -53,13 +57,138 @@ ul
     background-color:#ffc107;
     padding: 7px;
     height: 50px;
-    width: 50%;
+    
     border-radius: 5px;
-    left:100px;
-    position: absolute;
+
+    margin-top: 80px;
 }
 p
 {
     font-size: 40px;
     font-weight: 20;
+}
+
+.quantity-btn {
+    text-decoration: none;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #000;
+}
+
+.quantity {
+    font-size: 23px;
+}
+
+.product-info-wrapper {
+    position: relative;
+    display: flex;
+
+    width: 40%;
+    height: 100%;
+
+}
+
+.remove-btn { 
+    padding: 10px 50px;
+
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+
+    border-radius: 7px;
+
+}
+
+.price-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+
+.btn-wrapper {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media(max-width:1300px) {
+    .price-wrapper {
+        height: 300px;
+    }
+
+    .product_title {
+        font-size: 35px;
+    }
+
+    .product_img_wrapper {
+        width: 350px;
+        height: 350px;
+    }
+
+    .buy_btn {
+        height: 70px;
+        width: 350px;
+        font-size: 28px;
+    }
+
+    .price_cart p {
+        font-size: 36px;
+    }
+
+    @media(max-width:1000px) {
+
+        .items-wrapper {
+            position: relative;
+            width: 100%;
+
+        }
+
+        ul {
+            position: relative;
+            width: 100%;
+        }
+
+        .cart_item {
+            position: relative;
+            width: 100%;
+        }
+
+
+        .cart_item {
+            flex-direction: column;
+        }
+
+        .product-info-wrapper {
+            flex-direction: column;
+        }
+        
+        .product_info {
+            margin: 20px 0 0 0;
+            height: auto;
+
+        }
+
+        .price-wrapper {
+            position: relative;
+            justify-content: space-between;
+            width: 100%;
+            display: flex;
+            height: auto;
+
+        }
+
+        .product-info-wrapper {
+            width: 100%;
+        }
+
+        .product_img_wrapper {
+            position: relative;
+            width: 100%;
+            height: 600px;
+        }
+    }
 }
