@@ -2,6 +2,7 @@
 {% load static %}
 {%block styles%}
 <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+<link rel="stylesheet" href="{% static 'css/change_profile.css' %}">
 {%endblock %}
 {% block main %}
 <section class = "container">
@@ -9,13 +10,10 @@
         <h2 class = "form_title">Изменить информацию</h2>
         {%csrf_token%}
         {{form}}
+
+        <a class="change-password-link"  href="{%url 'change_password'%}">Изменить пароль</a>
         <button type="submit">Сохранить</button>
     </form>
-    <div class="change_btn">
-        <a  href="{%url 'change_password'%}">
-    Изменить пароль
-  </a>
-    </div>
 
 </section>
 {%endblock%}

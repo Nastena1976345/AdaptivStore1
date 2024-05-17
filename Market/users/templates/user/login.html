@@ -4,12 +4,12 @@
 <link rel="stylesheet" href="{% static 'css/forms.css' %}">
 {%endblock %}
 {% block main %}
-<section class = "container">
+<section class="container">
     <form method="post" action="">
-        <h2 class = "form_title">Авторизация</h2>
+        <h2 class="form_title">Авторизация</h2>
         {%csrf_token%}
-        {{form}}
-        <button type="submit" class = "btn btn-warning">Войти</button>
+        {{ form }}
+        <button type="submit" class="">Войти</button>
     </form>
 </section>
 {%endblock%}

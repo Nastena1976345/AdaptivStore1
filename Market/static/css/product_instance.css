@@ -60,16 +60,17 @@
     margin-top: 50px;
     font-weight: 700; 
 }
+
 .add_to_cart
 {
-    padding: 0.5em;
-  padding-left: 1.1em;
-  padding-right: 1.1em;
-  border-radius: 5px;
-  margin-right: 0.5em;
-  border: none;
-  outline: none;
-  transition: .4s ease-in-out;
-  background-color: #252525;
-  color: white;
+    padding: 8px 50px;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #252525;
+    color: white;
+
+  text-decoration: none;
 }

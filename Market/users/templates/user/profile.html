@@ -4,16 +4,20 @@
 <link rel="stylesheet" href="{% static 'css/profile.css' %}">
 {%endblock %}
 {% block main %}
-<section class="container">
-    <div class ="user_img_wrapper">
-        <img class ="user_img" src="{{profile.img.url}}">
+<section class="container user-data-wrapper">
+    <div class="user-data">
+
+        <div class="user_img_wrapper">
+            <img class="user_img" src="{{profile.img.url}}">
+        </div>
+        <h2>{{user.first_name}}</h2>
+        <a class="user-btn" href="{%url 'change_profile'%}">
+            Изменить данные
+        </a>
+        <a class="user-btn" href="{%url 'logout'%}">
+            Выйти
+        </a>
+
     </div>
-    <h2>{{user.first_name}}</h2>
-    <a class = "btn btn-warning" href="{%url 'change_profile'%}">
-        Изменить данные
-    </a>
-    <a class = "btn btn-warning" href="{%url 'logout'%}">
-        Выйти
-    </a>
 </section>
 {%endblock%}
